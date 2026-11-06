@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/person_db
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate        # Để Flyway quản lý schema, không để Hibernate tự tạo
+    show-sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+

@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: person_db_go
+    environment:
+      POSTGRES_DB: person_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data_go:/var/lib/postgresql/data
+
+volumes:
+  postgres_data_go:

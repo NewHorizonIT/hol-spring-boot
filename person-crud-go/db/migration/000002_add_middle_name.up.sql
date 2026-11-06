@@ -1,0 +1,2 @@
+ALTER TABLE person
+    ADD COLUMN middle_name VARCHAR(100);

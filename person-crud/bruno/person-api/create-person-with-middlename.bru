@@ -1,0 +1,19 @@
+meta {
+  name: Create Person With MiddleName
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8080/api/persons
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "firstName": "Nguyen",
+    "middleName": "Thi",
+    "lastName": "B"
+  }
+}
